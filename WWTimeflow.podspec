@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author             = { "Weilson Wonder" => "weilson@live.com" }
   s.social_media_url   = "https://sg.linkedin.com/in/weilson"
 
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "8.0"
 
   s.source       = { :git => "https://github.com/weilsonwonder/WWTimeflow.git", :tag => s.version }
   s.source_files  = "Sources/*.swift"
