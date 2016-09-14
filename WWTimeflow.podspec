@@ -4,8 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "NSDate easy manipulator for comparison and changing dates."
   s.homepage     = "https://github.com/weilsonwonder/WWTimeflow"
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.author             = { "Weilson Wonder" => "weilson@live.com" }
-  s.social_media_url   = "https://sg.linkedin.com/in/weilson"
+  s.author       = { "Weilson Wonder" => "weilson@live.com" }
 
   s.ios.deployment_target = "9.0"
 
