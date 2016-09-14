@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0031599A1D58E92200C705B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003159991D58E92200C705B2 /* AppDelegate.swift */; };
 		0031599C1D58E92200C705B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031599B1D58E92200C705B2 /* ViewController.swift */; };
 		0031599F1D58E92200C705B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0031599D1D58E92200C705B2 /* Main.storyboard */; };
 		003159A11D58E92200C705B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003159A01D58E92200C705B2 /* Assets.xcassets */; };
 		003159A41D58E92200C705B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003159A21D58E92200C705B2 /* LaunchScreen.storyboard */; };
 		0070A2C51D5992A3003BAADE /* WWTimeflow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0070A2C41D5992A3003BAADE /* WWTimeflow.swift */; };
+		00CFBF831D89299B00D58155 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CFBF821D89299B00D58155 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		003159961D58E92100C705B2 /* WWTimeflow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWTimeflow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		003159991D58E92200C705B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0031599B1D58E92200C705B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0031599E1D58E92200C705B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003159A01D58E92200C705B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003159A31D58E92200C705B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003159A51D58E92200C705B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0070A2C41D5992A3003BAADE /* WWTimeflow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WWTimeflow.swift; path = Sources/WWTimeflow.swift; sourceTree = SOURCE_ROOT; };
+		00CFBF821D89299B00D58155 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				003159AB1D58E99E00C705B2 /* Sources */,
-				003159991D58E92200C705B2 /* AppDelegate.swift */,
+				00CFBF821D89299B00D58155 /* AppDelegate.swift */,
 				0031599B1D58E92200C705B2 /* ViewController.swift */,
 				0031599D1D58E92200C705B2 /* Main.storyboard */,
 				003159A01D58E92200C705B2 /* Assets.xcassets */,
@@ -102,11 +102,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Wonder;
 				TargetAttributes = {
 					003159951D58E92100C705B2 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Q6Z46ZL2W7;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -146,9 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CFBF831D89299B00D58155 /* AppDelegate.swift in Sources */,
 				0070A2C51D5992A3003BAADE /* WWTimeflow.swift in Sources */,
 				0031599C1D58E92200C705B2 /* ViewController.swift in Sources */,
-				0031599A1D58E92200C705B2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +191,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -234,8 +239,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -254,6 +261,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -263,10 +271,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q6Z46ZL2W7;
 				INFOPLIST_FILE = WWTimeflow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonder.weilson.WWTimeflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -274,10 +287,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q6Z46ZL2W7;
 				INFOPLIST_FILE = WWTimeflow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wonder.weilson.WWTimeflow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
