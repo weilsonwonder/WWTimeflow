@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "WWTimeflow"
-  s.version      = "2.0.0"
+  s.version      = "2.0.1"
   s.summary      = "NSDate easy manipulator for comparison and changing dates."
   s.homepage     = "https://github.com/weilsonwonder/WWTimeflow"
   s.license      = { :type => "MIT", :file => "LICENSE" }

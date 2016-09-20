@@ -27,28 +27,6 @@ public class WWTimeflow {
     }
 }
 
-//extension Date: Comparable {}
-
-public func == (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs) == .orderedSame
-}
-
-public func < (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs) == .orderedAscending
-}
-
-public func > (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs) == .orderedDescending
-}
-
-public func <= (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs) != .orderedDescending
-}
-
-public func >= (lhs: Date, rhs: Date) -> Bool {
-    return lhs.compare(rhs) != .orderedAscending
-}
-
 public func - (lhs: Date, rhs: Date) -> TimeInterval {
     return lhs.timeIntervalSince(rhs)
 }
