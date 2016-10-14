@@ -1,22 +1,12 @@
 import Foundation
 
+private let timeZoneUTC: TimeZone = TimeZone(abbreviation: "UTC")!
+
 public class WWTimeflow {
     public static var calendar: Calendar = {
         var cal = Calendar(identifier: Calendar.Identifier.gregorian)
-        cal.timeZone = timeZoneUTC
         return cal
     }()
-    public static var timeZone: TimeZone {
-        set { calendar.timeZone = newValue }
-        get { return calendar.timeZone }
-    }
-    public static var dateFormatter: DateFormatter {
-        let df = DateFormatter()
-        df.timeZone = timeZone
-        df.calendar = calendar
-        return df
-    }
-    private static let timeZoneUTC: TimeZone = TimeZone(abbreviation: "UTC")!
     
     public private(set) var value: Int
     public private(set) var unit: Calendar.Component
@@ -24,6 +14,22 @@ public class WWTimeflow {
     init(value: Int, unit: Calendar.Component) {
         self.value = value
         self.unit = unit
+    }
+}
+
+public extension Calendar {
+    var dateFormatter: DateFormatter {
+        let df = DateFormatter()
+        df.timeZone = timeZone
+        df.calendar = self
+        return df
+    }
+    
+    var dateFormatterUTC: DateFormatter {
+        let df = DateFormatter()
+        df.timeZone = timeZoneUTC
+        df.calendar = self
+        return df
     }
 }
 
@@ -109,20 +115,34 @@ public extension Int {
 }
 
 public extension String {
-    public func dateFromFormat(format: String) -> Date? {
-        let formatter = WWTimeflow.dateFormatter
+    public func date(format: String) -> Date? {
+        let formatter = WWTimeflow.calendar.dateFormatter
         formatter.dateFormat = format
+        return formatter.date(from: self)
+    }
+    
+    public func date(UTC_format: String) -> Date? {
+        let formatter = WWTimeflow.calendar.dateFormatterUTC
+        formatter.dateFormat = UTC_format
         return formatter.date(from: self)
     }
 }
 
 public extension Date {
-    public func stringFromFormat(format: String) -> String {
-        let formatter = WWTimeflow.dateFormatter
+    public func string(format: String) -> String {
+        let formatter = WWTimeflow.calendar.dateFormatter
         formatter.dateFormat = format
         return formatter.string(from: self)
     }
     
+    public func string(UTC_format: String) -> String {
+        let formatter = WWTimeflow.calendar.dateFormatterUTC
+        formatter.dateFormat = UTC_format
+        return formatter.string(from: self)
+    }
+}
+
+public extension Date {
     public func differenceWith(date: Date, inUnit unit: Calendar.Component) -> Int {
         return WWTimeflow.calendar.dateComponents([unit], from: self, to: date).value(for: unit)!
     }
@@ -220,3 +240,4 @@ public extension Date {
         return (beginningOfMinute + 1.minute).addingTimeInterval(-1)
     }
 }
+
