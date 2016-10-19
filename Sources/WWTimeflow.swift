@@ -239,5 +239,8 @@ public extension Date {
     public var endOfMinute: Date {
         return (beginningOfMinute + 1.minute).addingTimeInterval(-1)
     }
+    
+    func number(of smallerComponent: Calendar.Component, in largerComponent: Calendar.Component) -> Int {
+        return WWTimeflow.calendar.range(of: smallerComponent, in: largerComponent, for: self)?.count ?? 0
+    }
 }
-
